@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Building2, FolderKanban, Users, Wallet } from 'lucide-react'
-import KPICard from '../components/dashbaord/KPICard'
+import KPICard from '../components/dashboard/KPICard'
 import ComparisonBarChart from '../components/charts/ComparisonBarChart'
 import PieChartCard from '../components/charts/PieChartCard'
 import Card from '../components/ui/Card'

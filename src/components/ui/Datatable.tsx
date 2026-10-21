@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import './DataTable.css'
+import './Datatable.css'
 
 export type Column<T> = {
   header: string
