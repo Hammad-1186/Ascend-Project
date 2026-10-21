@@ -1,0 +1,9 @@
+@reference "../../index.css";
+
+.card {
+  @apply rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200;
+}
+
+.card__title {
+  @apply mb-4 text-base font-semibold text-slate-800;
+}

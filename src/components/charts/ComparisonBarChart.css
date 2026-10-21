@@ -1,0 +1,62 @@
+@reference "../../index.css";
+
+.cbc__header {
+  @apply mb-4 flex flex-wrap items-center justify-between gap-3;
+}
+
+.cbc__title {
+  @apply text-base font-semibold text-slate-800;
+}
+
+.cbc__controls {
+  @apply flex flex-wrap items-center gap-2 sm:gap-4;
+}
+
+.cbc__legend {
+  @apply flex items-center gap-1;
+}
+
+.cbc__legend-item {
+  @apply inline-flex cursor-pointer items-center gap-2 rounded-lg px-2.5 py-1 text-sm text-slate-600 transition hover:bg-slate-100;
+}
+
+.cbc__legend-item--off {
+  @apply opacity-40;
+}
+
+.cbc__dot {
+  @apply h-3 w-3 rounded-sm;
+}
+
+.cbc__dot--primary {
+  @apply bg-indigo-500;
+}
+
+.cbc__dot--secondary {
+  @apply bg-indigo-100 ring-1 ring-indigo-200;
+}
+
+.cbc__chart {
+  @apply h-80;
+}
+
+/* ---------- Tooltip ---------- */
+.cbc-tooltip {
+  @apply min-w-36 rounded-lg bg-slate-900 px-3 py-2 text-xs text-white shadow-xl;
+}
+
+.cbc-tooltip__label {
+  @apply mb-1.5 font-semibold;
+}
+
+.cbc-tooltip__row {
+  @apply flex items-center gap-2 py-0.5;
+}
+
+.cbc-tooltip__name {
+  @apply text-slate-300;
+}
+
+.cbc-tooltip__value {
+  @apply ml-auto pl-4 font-semibold;
+}

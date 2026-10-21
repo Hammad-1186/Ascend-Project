@@ -1,0 +1,49 @@
+@reference "../../index.css";
+
+/* outer frame */
+.data-table__wrapper {
+  @apply overflow-x-auto rounded-xl border border-slate-200 bg-white;
+}
+
+.data-table {
+  @apply w-full border-collapse text-sm;
+}
+
+/* ---------- Header ---------- */
+.data-table__head-row {
+  @apply bg-indigo-50;
+}
+
+.data-table__head-cell {
+  @apply whitespace-nowrap border-b border-r border-slate-200 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-indigo-700;
+}
+
+.data-table__head-cell:last-child {
+  @apply border-r-0;
+}
+
+/* ---------- Body ---------- */
+.data-table__row:nth-child(even) {
+  @apply bg-slate-50;
+}
+
+.data-table__row:hover {
+  @apply bg-indigo-50;
+}
+
+.data-table__cell {
+  @apply border-b border-r border-slate-200 px-4 py-3 text-slate-700;
+}
+
+.data-table__cell:last-child {
+  @apply border-r-0;
+}
+
+.data-table__row:last-child .data-table__cell {
+  @apply border-b-0;
+}
+
+/* ---------- Alignment ---------- */
+.data-table__cell--left   { @apply text-left; }
+.data-table__cell--center { @apply text-center; }
+.data-table__cell--right  { @apply text-right; }

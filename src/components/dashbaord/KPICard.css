@@ -1,0 +1,86 @@
+@reference "../../index.css";
+
+/* ---------- Color variants ----------
+   --kpi-color : main accent (icon, chart, top bar)
+   --kpi-dark  : darker shade (title, number, trend text)
+   --kpi-soft  : very light tint (badge background, corner circle) */
+.kpi-card--indigo { --kpi-color: #6366f1; --kpi-dark: #4338ca; --kpi-soft: #eef2ff; }
+.kpi-card--green  { --kpi-color: #22c55e; --kpi-dark: #15803d; --kpi-soft: #ecfdf5; }
+.kpi-card--amber  { --kpi-color: #f59e0b; --kpi-dark: #b45309; --kpi-soft: #fffbeb; }
+.kpi-card--cyan   { --kpi-color: #06b6d4; --kpi-dark: #0e7490; --kpi-soft: #ecfeff; }
+.kpi-card--purple { --kpi-color: #8b5cf6; --kpi-dark: #6d28d9; --kpi-soft: #f5f3ff; }
+.kpi-card--rose   { --kpi-color: #f43f5e; --kpi-dark: #be123c; --kpi-soft: #fff1f2; }
+.kpi-card--teal   { --kpi-color: #14b8a6; --kpi-dark: #0f766e; --kpi-soft: #f0fdfa; }
+
+/* ---------- Base card (same white background for every KPI) ---------- */
+.kpi-card {
+  @apply relative flex flex-col overflow-hidden rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200 transition duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
+
+/* colored accent bar on top */
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--kpi-color);
+}
+
+/* soft decorative circle in the corner */
+.kpi-card::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 110px;
+  height: 110px;
+  border-radius: 9999px;
+  background: var(--kpi-soft);
+  transition: transform 0.4s ease;
+}
+
+.kpi-card:hover::after {
+  transform: scale(1.3);
+}
+
+/* ---------- Top row ---------- */
+.kpi-card__top {
+  @apply relative z-10 flex items-center justify-between;
+}
+
+.kpi-card__title {
+  @apply text-xs font-semibold uppercase tracking-wider;
+  color: var(--kpi-dark);
+}
+
+.kpi-card__icon {
+  @apply flex h-10 w-10 items-center justify-center rounded-xl text-white;
+  background: var(--kpi-color);
+  box-shadow: 0 8px 16px -4px color-mix(in srgb, var(--kpi-color) 50%, transparent);
+}
+
+/* ---------- Number ---------- */
+.kpi-card__value {
+  @apply relative z-10 mt-3 text-3xl font-extrabold;
+  color: var(--kpi-dark);
+}
+
+/* ---------- Trend ---------- */
+.kpi-card__trend-row {
+  @apply relative z-10 mt-2 flex items-center gap-2 text-xs;
+}
+
+.kpi-card__trend {
+  @apply inline-flex items-center gap-1 rounded-full px-2 py-0.5 font-semibold;
+  background: var(--kpi-soft);
+  color: var(--kpi-dark);
+}
+
+.kpi-card__caption {
+  @apply text-slate-400;
+}
+
+/* ---------- Mini chart ---------- */
+.kpi-card__chart {
+  @apply relative z-10 mt-4 h-16 w-full;
+}

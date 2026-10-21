@@ -1,0 +1,13 @@
+@reference "../../index.css";
+
+.select {
+  @apply relative inline-flex items-center;
+}
+
+.select__input {
+  @apply cursor-pointer appearance-none rounded-lg border border-slate-200 bg-white py-1.5 pl-3 pr-9 text-sm font-medium text-slate-700 shadow-sm transition hover:border-indigo-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200;
+}
+
+.select__icon {
+  @apply pointer-events-none absolute right-3 text-slate-500;
+}
